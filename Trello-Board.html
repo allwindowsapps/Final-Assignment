@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>.{box-sizing: border-box;}
+
+    body {background-image: url( "background.jpg" );
+    background-size: cover;
+    background-attachment: fixed}
+
+    .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    padding: 8px 20px;
+    background-color: rgba( 64, 144, 172, 0.65 );
+    color: white;
+}
+
+.navbar .pointer:hover {
+    opacity: 0.75;
+}
+
+.navbar > * {
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.navbar .menu > *, .navbar .actions > * {
+    display: inline-block;
+    padding: 8px;
+    border-radius: 2px;
+    margin: 0px 4px;
+    background-color: rgba( 64, 144, 172, 1 );
+}
+
+.navbar .menu {
+    justify-content: flex-start;
+}
+
+.navbar .menu-input {
+    background-color: transparent;
+    padding: 0;
+}
+
+.navbar .menu-input input {
+    width: 120px;
+    padding: 4px 0.5em;
+    border: none;
+    border-radius: 2px;
+    outline: none;
+    background-color: rgba( 64, 144, 172, 1 );
+    color: white;
+    font-size: 1.15em;
+    line-height: 1.4;
+    color: black;
+}
+
+.navbar .menu-input input:focus {
+    background-color: white;
+}
+
+.navbar .app-title {
+    justify-content: space-around;
+    font-family: "Comic Sans", "Comic Sans MS", cursive;
+    font-size: 1.3em;
+}
+
+.navbar .actions {
+    justify-content: flex-end;
+}
+
+.board-container {
+    display: flex;
+    height:110px;
+    overflow-y: hidden;
+}
+
+
+.board-menu {
+    position: fixed;
+    margin-top: 58px;
+    right: 0px;
+    left: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    padding: 0 20px;
+    color: black;
+    background-color: rgba( 128, 128, 128, 0.3 );
+    color: white;
+}
+.home {width: 20px; height: 20px;}      
+.list {width: 20px; height: 20px; vertical-align: middle;}
+.plus {width: 20px; height: 20px;}   
+.id   {width: 20px; height: 20px;}
+.dot  {width: 20px; height: 20px; vertical-align: middle;}  
+
+.flex { display: flex; justify-content: space-around;}
+
+    .Board1 { background-color: rgb(206, 216, 201); width: 220px; height: 230px;   }
+        .board1.1 {width: 210px;}
+        .todo { margin:auto; padding-left:10px; padding-top:5px;  }
+        .dot {padding-left: 140px; cursor:pointer;}
+        .boarda { width: 200px; height: 30px; background-color: white; margin: auto; padding-left: 10px; padding-top: 10px; cursor:pointer;}
+        .boardb { width: 200px; height: 30px; background-color: white; margin: auto; padding-left: 10px; padding-top: 10px; cursor:pointer; }
+        .boardc { width: 200px; height: 30px; background-color: white; margin: auto; padding-left: 10px; padding-top: 10px; cursor:pointer;}
+        .boardd { width: 200px; height: 25px; background-color: rgb(206, 216, 201); margin: auto; padding-left: 10px; padding-top: 10px; cursor:pointer;}
+
+
+    
+    .Board2 { background-color: rgb(206, 216, 201); width: 220px; height: 250px;  }
+         .boarde {width: 210px;}
+            .doing { margin:auto; padding-left:10px; padding-top:5px;  }
+            .dot1 {padding-left: 140px; cursor:pointer;}
+            .boardf { width: 200px; height: 30px; background-color: white; margin: auto; padding-left: 10px; padding-top: 10px; cursor:pointer;}
+            .boardg {  width: 200px; height: 80px; background-color: white; margin: auto; padding-left: 10px; padding-top: 10px;  }
+            .button {padding-left: 10px; display: inline-block; }
+            .button1 {background-color: olivedrab; width:100px; height:40px; font-weight: bolder;  }
+            .button1:hover { cursor: pointer; color: rgb(192, 193, 126);}
+            .kamal {rows:3; column:15; width:185px; height: 65px; resize: none;}
+            .cancel {padding-top: 20px; padding-left:10px; height: 20px; width: 20px; cursor: pointer; }
+
+    .Board3 { background-color: rgb(206, 216, 201); width: 220px; height: 113px;  }
+        .tv { margin:auto; padding-left:10px; padding-top:5px;  }
+        .dot2 {padding-left: 70px; cursor:pointer;}
+        .boardi { width: 200px; height: 30px; background-color: white; margin: auto; padding-left: 10px; padding-top: 10px; cursor:pointer;}
+        .boardj { width: 200px; height: 25px; background-color: rgb(206, 216, 201); margin: auto; padding-left: 10px; padding-top: 10px; cursor:pointer;}
+
+    .Board4 { background-color: rgb(206, 216, 201); width: 220px; height: 114px;  }
+        .deploy { margin:auto; padding-left:10px; padding-top:5px;  }
+        .dot3 {padding-left: 110px; cursor:pointer;}
+        .boardl {width: 200px; height: 30px; background-color: white; margin: auto; padding-left: 10px; padding-top: 10px;cursor:pointer;}
+        .boardm { width: 200px; height: 25px; background-color: rgb(206, 216, 201); margin: auto; padding-left: 10px; padding-top: 10px;cursor:pointer;}
+
+    .Board5 { background-color: rgb(206, 216, 201); width: 220px; height:  60px;  }
+    .done { margin:auto; padding-left:10px; padding-top:5px;  }
+        .dot4 {padding-left: 140px; cursor:pointer;}
+        .boardo { width: 200px; height: 30px; background-color: rgb(206, 216, 201); margin: auto; padding-left: 10px; padding-top: 10px; cursor:pointer;}
+    
+       
+
+    .Board6 { background-color: rgb(206, 216, 201); width: 220px; height:  40px; }
+        .boardp { height: 30px; padding-top: 10px; padding-left: 10px; cursor:pointer;}
+
+.boarda:hover{ background-color: rgb(216, 207, 201) ;}
+.boardb:hover{ background-color: rgb(216, 207, 201) ;}
+.boardc:hover{ background-color: rgb(216, 207, 201) ;}
+.boardd:hover{ background-color: rgb(216, 207, 201) ;}
+.boardf:hover{ background-color: rgb(216, 207, 201) ;}
+
+.boardi:hover{ background-color: rgb(216, 207, 201) ;}
+.boardj:hover{ background-color: rgb(216, 207, 201) ;}
+.boardl:hover{ background-color: rgb(216, 207, 201) ;}
+.boardm:hover{ background-color: rgb(216, 207, 201) ;}
+.boardo:hover{ background-color: rgb(216, 207, 201) ;}
+.boardp:hover{ background-color: rgb(216, 207, 201) ;}
+   
+    
+
+ </style>
+</head>
+
+
+
+
+<body>
+    <nav class="navbar">
+        <ul class="menu">
+            <li class="pointer">
+                <img class="home" src="home1.png">
+            </li>
+            <li class="pointer">
+                <img class="list" src="list1.png">
+               
+                     Boards 
+               
+            </li>
+            <li class="menu-input">
+                <input type="text">
+            </li>
+        </ul>
+        <div class="app-title">
+            Tralala
+        </div>
+        <div class="actions">
+            <span class="pointer">
+                <img class="plus" src="plus.png">
+            </span>
+            <span class="pointer">
+                <img class="id" src="id.png">
+            </span>
+        </div>
+    </nav>
+
+    <div class="board-container">
+        <div class="board-menu">
+            <div class="board-title">Frontend Training</div>
+            <div class="board-show-menu pointer"><img class="dot" src="dotup.png">   Show Menu 
+            </div>
+        </div>
+    </div>
+
+<div class="flex">
+
+    <div class="Board1">
+        <div class="board1.1"><span class="todo">To Do</span> <span class="dot">...</span></div><br>
+            
+        <div class="boarda">Learn HTML</div><br>
+        <div class="boardb">Learn CSS</div><br>
+        <div class="boardc">Learn JavaScript</div>
+        <div class="boardd">+ Add Another Card</div>
+    </div>
+
+    <div class="Board2"> 
+        <div class="boarde"><span class="doing">Doing</span> <span class="dot1">...</span></div><br>
+        <div class="boardf">Prepare Resume</div><br>
+         <form class=boardg>
+            <textarea rows="3"placeholder="Enter a title for this card..." class="kamal"></textarea>
+            
+            </form>
+        
+            <div class="button"><button class="button1">Add Card</button>
+               </div>
+               <img class="cancel" src="cancel.png">
+
+        
+
+    </div>
+    
+    <div class="Board3">
+         <div class="boardh"><span class="tv">Testing/Verifying<span class="dot2">...</span></div><br>
+         <div class="boardi"> Twitter app frontend </div>
+         <div class="boardj">+ Add another Card</div>
+    </div>
+
+    <div class="Board4"> 
+        <div class="boardk"><span class="deploy">Deploying<span class="dot3">...</span></div><br>
+        <div class="boardl"> Twitter app backend </div>
+        <div class="boardm">+ Add another Card</div>
+    </div>
+
+    <div class="Board5"> 
+        <div class="boardn"><span class="done">Done<span class="dot4">...</span></div>
+        <div class="boardo">+ Add Card</div>
+    </div>
+
+    <div class="Board6"> 
+        <div class="boardp">+ Add Another List</div>
+
+    </div>
+    
+</div>
+
+   
+   
+</body>
+</html>
+
